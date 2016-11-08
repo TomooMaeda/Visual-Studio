@@ -1,0 +1,43 @@
+﻿<Window x:Class="DocumentCameraTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DocumentCameraTool"
+        mc:Ignorable="d"
+        Title="SimpleShoga" WindowState="Maximized" Topmost="False" Loaded="Window_Loaded" 
+        AllowsTransparency="True" WindowStyle="None" Background="#FFF5F5FF" Name="win" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Name="pictureView" Grid.Row="0" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="3" 
+               TouchDown="pictureView_TouchDown" TouchUp="pictureView_TouchUp" TouchMove="pictureView_TouchMove" />
+        <Image Name="imageCapure" Grid.Row="0" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <Image Name="cameraZoom" Grid.ColumnSpan="3" Grid.RowSpan="10" Margin="0, 0, 0, 0"/>
+
+        <Slider Name="zoomSlider" Minimum="0" Maximum="255 " Grid.Row="10" Grid.Column="0" ValueChanged="zoomSlider_ValueChanged" Visibility="Hidden"/>
+        <TextBlock Text="{Binding Value, ElementName=zoomSlider}" Grid.Row="10" Grid.Column="0" VerticalAlignment="Bottom" Visibility="Hidden" />
+        <Slider Name="focusSlider" Minimum="0" Maximum="255 " Grid.Row="10" Grid.Column="1" ValueChanged="focusSlider_ValueChanged" Visibility="Hidden" />
+        <TextBlock Text="{Binding Value, ElementName=focusSlider}" Grid.Row="10" Grid.Column="1" VerticalAlignment="Bottom" Visibility="Hidden" />
+        <Slider Name="exposureSlider" Minimum="0" Maximum="10" Grid.Row="10" Grid.Column="2" ValueChanged="exposureSlider_ValueChanged"   Visibility="Hidden"/>
+        <TextBlock Text="{Binding Value, ElementName=exposureSlider}" Grid.Row="10" Grid.Column="2" VerticalAlignment="Bottom"  Visibility="Hidden"/>
+
+        <Border Name="border" Grid.Row="0" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="3"/>
+    </Grid>
+</Window>

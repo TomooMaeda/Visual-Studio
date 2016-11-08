@@ -1,0 +1,53 @@
+﻿<Window x:Class="DocumentCameraTool.SubFunctionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DocumentCameraTool"
+        mc:Ignorable="d"
+        Title="SubFunctionWindow" Height="250" Width="50" WindowStyle="None" AllowsTransparency="True" 
+        Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Border BorderBrush="#FF007ACC"
+            BorderThickness="1" Margin="3">
+        <Border.Effect>
+            <DropShadowEffect ShadowDepth="0" BlurRadius="8" 
+                              Color="#FF007ACC" />
+        </Border.Effect>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="title" Text="SimpleShoga" TextWrapping="Wrap" TextAlignment="Center" FontSize="12" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+            
+            <Image Source="image\stop.png" Grid.Row="2" Grid.Column="2" />
+            <Button Name="StopButton" Background="#01000000" Grid.Row="2" Grid.Column="2"  Click="StopButton_Click"/>
+            <Image Source="image\start.png" Grid.Row="3" Grid.Column="2"/>
+            <Button Name="StartButton" Background="#01000000" Grid.Row="3" Grid.Column="2" Click="StartButton_Click" />
+            <Image Source="image\zoom.png" Grid.Row="4" Grid.Column="2"/>
+            <Button Name="BubunZoomButton" Background="#01000000" Grid.Row="4" Grid.Column="2" Click="BubunZoomButton_Click"/>
+            <Image Source="image\back.png" Grid.Row="5" Grid.Column="2"/>
+            <Button Name="ResetButton" Background="#01000000" Grid.Row="5" Grid.Column="2" Click="ResetButton_Click"/>
+            <Image Source="image\close.png" Grid.Row="6" Grid.Column="2"/>
+            <Button Name="CloseButton" Background="#01000000" Grid.Row="6" Grid.Column="2" Click="CloseButton_Click"/>
+            <Image Source="image\recamera.png" Grid.Row="7" Grid.Column="2"/>
+            <Button Name="RecameraButton" Background="#01000000" Grid.Row="7" Grid.Column="2" Click="RecameraButton_Click" />
+
+        </Grid>
+    </Border>
+</Window>
