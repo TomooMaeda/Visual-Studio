@@ -58,7 +58,7 @@ namespace DocumentCameraTool
 
         private void RecameraButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindow)this.Owner).CameraReset();
         }
     }
 }

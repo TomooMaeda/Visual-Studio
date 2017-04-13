@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DocumentCameraTool"
         mc:Ignorable="d"
-        Title="SubFunctionWindow" Height="250" Width="50" WindowStyle="None" AllowsTransparency="True" 
+        Title="SubFunctionWindow" Height="400" Width="80" WindowStyle="None" AllowsTransparency="True" 
         Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Border BorderBrush="#FF007ACC"
             BorderThickness="1" Margin="3">
@@ -33,20 +33,14 @@
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Name="title" Text="SimpleShoga" TextWrapping="Wrap" TextAlignment="Center" FontSize="12" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
-            
-            <Image Source="image\stop.png" Grid.Row="2" Grid.Column="2" />
-            <Button Name="StopButton" Background="#01000000" Grid.Row="2" Grid.Column="2"  Click="StopButton_Click"/>
-            <Image Source="image\start.png" Grid.Row="3" Grid.Column="2"/>
-            <Button Name="StartButton" Background="#01000000" Grid.Row="3" Grid.Column="2" Click="StartButton_Click" />
-            <Image Source="image\zoom.png" Grid.Row="4" Grid.Column="2"/>
-            <Button Name="BubunZoomButton" Background="#01000000" Grid.Row="4" Grid.Column="2" Click="BubunZoomButton_Click"/>
-            <Image Source="image\back.png" Grid.Row="5" Grid.Column="2"/>
-            <Button Name="ResetButton" Background="#01000000" Grid.Row="5" Grid.Column="2" Click="ResetButton_Click"/>
-            <Image Source="image\close.png" Grid.Row="6" Grid.Column="2"/>
-            <Button Name="CloseButton" Background="#01000000" Grid.Row="6" Grid.Column="2" Click="CloseButton_Click"/>
-            <Image Source="image\recamera.png" Grid.Row="7" Grid.Column="2"/>
-            <Button Name="RecameraButton" Background="#01000000" Grid.Row="7" Grid.Column="2" Click="RecameraButton_Click" />
+            <TextBlock Name="title" Text="SimpleShoga" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+            <Button Name="StopButton" Content="Stop" Background="#01000000" Grid.Row="2" Grid.Column="2"  Click="StopButton_Click" />
+            <Button Name="StartButton" Content="Start" Background="#01000000" Grid.Row="3" Grid.Column="2" Click="StartButton_Click" />
+            <Button Name="BubunZoomButton" Content="BZoom" Background="#01000000" Grid.Row="4" Grid.Column="2" Click="BubunZoomButton_Click"/>
+            <Button Name="ResetButton" Content="Reset" Background="#01000000" Grid.Row="5" Grid.Column="2" Click="ResetButton_Click"/>
+            <Button Name="CloseButton" Content="Close" Background="#01000000" Grid.Row="6" Grid.Column="2" Click="CloseButton_Click"/>
+            <Button Name="RecameraButton" Content="CSelect" Background="#01000000" Grid.Row="7" Grid.Column="2" Click="RecameraButton_Click" />
 
         </Grid>
     </Border>

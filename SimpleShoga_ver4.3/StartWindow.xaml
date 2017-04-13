@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="StartWindow" Height="300" Width="300" Loaded="Window_Loaded" WindowStyle="None">
     <Grid>
-        <Image Height="300" Width="300" Source="image/logo.bmp" />
+        <Image Height="300" Width="300" />
     </Grid>
 </Window>

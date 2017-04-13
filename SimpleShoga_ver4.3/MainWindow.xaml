@@ -29,7 +29,9 @@
         <Image Name="pictureView" Grid.Row="0" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="3" 
                TouchDown="pictureView_TouchDown" TouchUp="pictureView_TouchUp" TouchMove="pictureView_TouchMove" />
         <Image Name="imageCapure" Grid.Row="0" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="3"/>
-        <Image Name="cameraZoom" Grid.ColumnSpan="3" Grid.RowSpan="10" Margin="0, 0, 0, 0"/>
+        <Image Name="cameraMove" Grid.ColumnSpan="3" Grid.RowSpan="10" Margin="0, 0, 0, 0" 
+               TouchMove="cameraMove_TouchMove" TouchUp="cameraMove_TouchUp" TouchDown="cameraMove_TouchDown"
+               Panel.ZIndex="10"/>
 
         <Slider Name="zoomSlider" Minimum="0" Maximum="255 " Grid.Row="10" Grid.Column="0" ValueChanged="zoomSlider_ValueChanged" Visibility="Hidden"/>
         <TextBlock Text="{Binding Value, ElementName=zoomSlider}" Grid.Row="10" Grid.Column="0" VerticalAlignment="Bottom" Visibility="Hidden" />
